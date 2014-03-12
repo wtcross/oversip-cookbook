@@ -12,5 +12,4 @@ recipe "freeswitch::tarball", "Install OverSIP from tarball"
 
 depends 'apt', '~> 2.2'
 
-supports "debian", ">= 6.0"
-supports "ubuntu", ">= 12.04"
+supports "debian", ">= 7.0"

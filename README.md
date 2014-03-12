@@ -7,8 +7,7 @@ A Chef coookbook for installing and configuring [OverSIP][OverSIP]
 
 ### Platform
 
-+ Tested on Ubuntu 12.04
-+ Tested on Debian 7
++ Tested on Debian 7.4
 
 ### Cookbooks
 + [apt](https://github.com/opscode-cookbooks/apt)
