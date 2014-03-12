@@ -1,0 +1,20 @@
+#
+# oversip startup options
+#
+
+# Set to 'yes' when configured.
+RUN=<%= node['oversip']['run'] %>
+
+# User to run as.
+USER=<%= node['oversip']['user'] %>
+
+# Group to run as.
+GROUP=<%= node['oversip']['group'] %>
+
+# Directory with the configuration files.
+# By default '/etc/oversip/'.
+#CONFIG_DIR=<%= node['oversip']['config_dir'] %>/
+
+# Main configuration file name (within the configuration directory).
+# By default 'oversip.conf'.
+#CONFIG_FILE=<%= node['oversip']['config_file'] %>

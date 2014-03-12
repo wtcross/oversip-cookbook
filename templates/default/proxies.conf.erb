@@ -1,0 +1,26 @@
+default_proxy:
+  do_record_routing: <%= node['oversip']['default_proxy']['do_record_routing'] %>
+  use_dns_cache: <%= node['oversip']['default_proxy']['use_dns_cache'] %>
+  dns_cache_time: <%= node['oversip']['default_proxy']['dns_cache_time'] %>
+  use_blacklist: <%= node['oversip']['default_proxy']['use_blacklist'] %>
+  blacklist_time: <%= node['oversip']['default_proxy']['blacklist_time'] %>
+  use_naptr: <%= node['oversip']['default_proxy']['use_naptr'] %>
+  use_srv: <%= node['oversip']['default_proxy']['use_srv'] %>
+  force_transport_preference: <%= node['oversip']['default_proxy']['force_transport_preference'] %>
+  dns_failover_on_503: <%= node['oversip']['default_proxy']['dns_failover_on_503'] %>
+  timer_B: <%= node['oversip']['default_proxy']['timer_B'] %>
+  timer_C: <%= node['oversip']['default_proxy']['timer_C'] %>
+  timer_F: <%= node['oversip']['default_proxy']['timer_F'] %>
+  callback_on_server_tls_handshake: <%= node['oversip']['default_proxy']['callback_on_server_tls_handshake'] %>
+  transport_preference: <%= node['oversip']['default_proxy']['transport_preference'].empty? ? 'null' : node['oversip']['default_proxy']['transport_preference'].to_s.gsub(/"/, '') %>
+  ip_type_preference: <%= node['oversip']['default_proxy']['ip_type_preference'].empty? ? 'null' : node['oversip']['default_proxy']['ip_type_preference'].to_s.gsub(/"/, '') %>
+
+<% if !node['oversip']['proxies'].empty? %>
+<% node['oversip']['proxies'].each do |proxy| %>
+
+<%= proxy.name %>:
+<% proxy.config.each do |key, value| %>
+<%= "  #{key}: #{value}" %>
+<% end %>
+<% end %>
+<% end %>
