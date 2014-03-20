@@ -10,6 +10,19 @@ when 'ubuntu', 'debian'
 
   package node['oversip']['package']['name']
 
+  oversip_user = node['oversip']['user']
+  oversip_group = node['oversip']['group']
+  home_directory = "/home/#{oversip_user}"
+
+  user oversip_user do
+    shell '/bin/bash'
+    home home_directory
+  end
+
+  group oversip_group do
+    members oversip_user
+  end
+
   directory node['oversip']['config_dir'] do
     owner node['oversip']['user']
     group node['oversip']['group']

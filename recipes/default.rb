@@ -48,3 +48,7 @@ template "/etc/default/oversip" do
   mode 0644
   notifies :restart, "service[#{node['oversip']['service']}]"
 end
+
+service node['oversip']['service'] do
+  action :enable
+end

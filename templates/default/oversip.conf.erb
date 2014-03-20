@@ -20,7 +20,7 @@ sip:
   callback_on_client_tls_handshake: <%= @sip_conf['callback_on_client_tls_handshake'] %>
   tcp_keepalive_interval: <%= @sip_conf['tcp_keepalive_interval'] %>
   record_route_hostname_tls_ipv4: <%= @sip_conf['record_route_hostname_tls_ipv4'] %>
-  record_route_hostname_tls_ipv6:  <%= @sip_conf['record_route_hostname_tls_ipv6'] %>
+  record_route_hostname_tls_ipv6: <%= @sip_conf['record_route_hostname_tls_ipv6'] %>
   local_domains: <%= @sip_conf['local_domains'].empty? ? 'null' : @core_conf['local_domains'].to_s.gsub(/"/, '') %>
 
 websocket:

@@ -58,7 +58,7 @@ default['oversip']['sip']['listen_port_tls_tunnel'] = 5062
 
 default['oversip']['sip']['callback_on_client_tls_handshake'] = 'yes'
 
-default['oversip']['sip']['local_domains'] = 'null'
+default['oversip']['sip']['local_domains'] = []
 
 default['oversip']['sip']['tcp_keepalive_interval'] = 300
 
