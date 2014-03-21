@@ -3,7 +3,7 @@ oversip-cookbook
 
 [![Build Status](https://travis-ci.org/wtcross/oversip-cookbook.svg?branch=master)](https://travis-ci.org/wtcross/oversip-cookbook)
 
-A Chef coookbook for installing and configuring [OverSIP][OverSIP]
+A Chef coookbook for installing and configuring [OverSIP](https://github.com/versatica/OverSIP)
 
 ## Requirements
 
