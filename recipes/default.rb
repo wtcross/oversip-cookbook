@@ -10,8 +10,8 @@ service node['oversip']['service']
 config_dir = node['oversip']['config_dir']
 config_file = node['oversip']['config_file']
 
-cookbook_file 'server.rb' do
-  path "#{node['oversip']['config_dir']}/server.rb"
+cookbook_file node['oversip']['server_file'] do
+  path "#{node['oversip']['config_dir']}/#{node['oversip']['server_file']}"
   owner node['oversip']['user']
   group node['oversip']['group']
   action :create_if_missing

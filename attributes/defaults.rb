@@ -16,6 +16,7 @@ default['oversip']['user'] = 'oversip'
 default['oversip']['group'] = 'oversip'
 
 default['oversip']['config_dir'] = '/etc/oversip'
+default['oversip']['server_file'] = 'server.rb'
 default['oversip']['config_file'] = 'oversip.conf'
 
 #####################
