@@ -5,6 +5,7 @@ gem 'foodcritic', '~> 3.0'
 gem 'chefspec'
 gem 'rake'
 gem 'rspec'
+gem 'vagrant', '~> 1.5'
 
 group :integration do
 	gem 'test-kitchen'
